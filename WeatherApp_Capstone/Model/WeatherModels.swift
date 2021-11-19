@@ -1,15 +1,11 @@
+// This file was generated from JSON Schema using quicktype, do not modify it directly.
+// To parse the JSON, add this file to your project and do:
 //
-//  WeatherModels.swift
-//  WeatherApp_Capstone
-//
-//  Created by Rayan Taj on 18/11/2021.
-//
+//   let weather = try? newJSONDecoder().decode(Weather.self, from: jsonData)
 
 import Foundation
 
-
-import Foundation
-
+// MARK: - Weather
 struct Weather: Decodable {
     let coord: Coord
     let weather: [WeatherElement]
@@ -25,17 +21,20 @@ struct Weather: Decodable {
     let cod: Int
 }
 
+// MARK: - Clouds
 struct Clouds: Decodable {
     let all: Int
 }
 
+// MARK: - Coord
 struct Coord: Decodable {
     let lon, lat: Double
 }
 
+// MARK: - Main
 struct Main: Decodable {
     let temp, feelsLike, tempMin, tempMax: Double
-    let pressure, humidity, seaLevel, grndLevel: Int
+    let pressure, humidity: Int
 
     enum CodingKeys: String, CodingKey {
         case temp
@@ -43,19 +42,17 @@ struct Main: Decodable {
         case tempMin = "temp_min"
         case tempMax = "temp_max"
         case pressure, humidity
-        case seaLevel = "sea_level"
-        case grndLevel = "grnd_level"
     }
 }
 
-
+// MARK: - Sys
 struct Sys: Decodable {
     let type, id: Int
     let country: String
     let sunrise, sunset: Int
 }
 
-
+// MARK: - WeatherElement
 struct WeatherElement: Decodable {
     let id: Int
     let main, weatherDescription, icon: String
@@ -73,4 +70,3 @@ struct Wind: Decodable {
     let deg: Int
     let gust: Double
 }
-

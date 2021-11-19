@@ -11,8 +11,16 @@ class ViewController: UIViewController {
     
     // Design Views for drawings
     @IBOutlet weak var topBarCard: UIView!
+    @IBOutlet weak var mainCard: UIView!
+
+    
+    @IBOutlet weak var cityNameLabel: UILabel!
+    @IBOutlet weak var weatherDescriptionLabel: UILabel!
+    @IBOutlet weak var weatherImage: UIImageView!
     
     @IBOutlet weak var getLocationButton: UIButton!
+    @IBOutlet weak var citySearchBar: UISearchBar!
+    
     
     // locationManager is CLLocationManager object
     let locationManager = CLLocationManager()
@@ -28,27 +36,20 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         // update UI views for design purposes
         topBarCard.layer.cornerRadius = 15
-        getLocationButton.layer.cornerRadius = 15
-        
+        mainCard.backgroundColor = UIColor(white: 1, alpha: 0.3)
+        mainCard.layer.cornerRadius = 15
+        getLocationButton.layer.cornerRadius = 25
+        citySearchBar.layer.cornerRadius = 15
         super.viewDidLoad()
         
         
-        //
+       
         locationManager.delegate = self
         locationManager.requestWhenInUseAuthorization()
         locationManager.requestLocation()
         
-        networkManager.getWeatherData(cityName: "Riyadh")
         
-        networkManager.fetchWeatherData(completion: {  weatherData in
-            
-            DispatchQueue.main.async {
-                self.weatherData? = weatherData
-                print("In View controller :   \(weatherData.name)")
-            }
-            
-            
-        })
+  
     }
     
     
@@ -58,6 +59,16 @@ class ViewController: UIViewController {
         locationManager.requestLocation()
         
     }
+    
+    
+    func setupViewElements(weatherData:Weather)  {
+        
+        
+    }
+    
+    
+    
+    
     
 }
 
@@ -75,14 +86,26 @@ extension ViewController  :  CLLocationManagerDelegate  {
             let longitude = location.coordinate.longitude
             print(latitude, " " , longitude)
             
-            //            weatherManager.fetchWeather(latitude: lat, longitude: lon)
+            
+            networkManager.getWeatherData(longitude: String(longitude), latitude: String(latitude))
+            networkManager.fetchWeatherData(completion: {  weatherData in
+                
+                DispatchQueue.main.async { [self] in
+                    self.weatherData? = weatherData
+                 
+                    self.weatherDescriptionLabel.text = weatherData.weather[0].weatherDescription
+                    self.cityNameLabel.text = weatherData.name
+                }
+                
+                
+            })
+     
+            
         }
     }
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         print(error)
     }
-    
-    
     
 }

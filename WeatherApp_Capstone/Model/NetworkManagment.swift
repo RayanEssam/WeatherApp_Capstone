@@ -17,8 +17,9 @@ struct NetworkManagment {
     }
     
     // prepare the url and return the suited string - for fetch by coords
-    func getWeatherData(longitude : String , latitude : String)  {
-//        let preparedUrl = "\(url)lat=\(latitude)&lon=\(longitude)"
+   mutating func getWeatherData(longitude : String , latitude : String)  {
+
+       preparedUrl = "\(url)lat=\(latitude)&lon=\(longitude)&appid=\(appID)"
     }
     
     
@@ -49,6 +50,8 @@ struct NetworkManagment {
                     }
 
                     return
+                }else{
+                  
                 }
             }
             
