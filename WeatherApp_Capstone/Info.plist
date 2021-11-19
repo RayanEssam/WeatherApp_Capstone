@@ -4,9 +4,11 @@
 <dict>
 	<key></key>
 	<string></string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>Please enable us to get the location </string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>hello</string>
 	<key>UIApplicationSceneManifest</key>
-    <key>NSLocationAlwaysUsageDescription</key>
-    <string>I need your location</string>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
 		<false/>

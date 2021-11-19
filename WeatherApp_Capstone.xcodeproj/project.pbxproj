@@ -14,6 +14,7 @@
 		CF67E5672744E1F500261E51 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF67E5662744E1F500261E51 /* Assets.xcassets */; };
 		CF67E56A2744E1F500261E51 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF67E5682744E1F500261E51 /* LaunchScreen.storyboard */; };
 		CF67E5722744E6D500261E51 /* NetworkManagment.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF67E5712744E6D500261E51 /* NetworkManagment.swift */; };
+		CFB19D62274634190038EAC6 /* WeatherModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB19D61274634190038EAC6 /* WeatherModels.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		CF67E5692744E1F500261E51 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CF67E56B2744E1F500261E51 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CF67E5712744E6D500261E51 /* NetworkManagment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManagment.swift; sourceTree = "<group>"; };
+		CFB19D61274634190038EAC6 /* WeatherModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherModels.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,7 +44,6 @@
 		CF67E5512744E1F100261E51 = {
 			isa = PBXGroup;
 			children = (
-				CF67E5712744E6D500261E51 /* NetworkManagment.swift */,
 				CF67E55C2744E1F100261E51 /* WeatherApp_Capstone */,
 				CF67E55B2744E1F100261E51 /* Products */,
 			);
@@ -64,8 +65,6 @@
 				CF67E5732744EBCE00261E51 /* Model */,
 				CF67E55D2744E1F100261E51 /* AppDelegate.swift */,
 				CF67E55F2744E1F100261E51 /* SceneDelegate.swift */,
-				CF67E5612744E1F100261E51 /* ViewController.swift */,
-				CF67E5632744E1F100261E51 /* Main.storyboard */,
 				CF67E5662744E1F500261E51 /* Assets.xcassets */,
 				CF67E5682744E1F500261E51 /* LaunchScreen.storyboard */,
 				CF67E56B2744E1F500261E51 /* Info.plist */,
@@ -76,6 +75,8 @@
 		CF67E5732744EBCE00261E51 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				CF67E5712744E6D500261E51 /* NetworkManagment.swift */,
+				CFB19D61274634190038EAC6 /* WeatherModels.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -83,6 +84,7 @@
 		CF67E5742744EBDC00261E51 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				CF67E5632744E1F100261E51 /* Main.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -90,6 +92,7 @@
 		CF67E5752744EBE800261E51 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				CF67E5612744E1F100261E51 /* ViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -169,6 +172,7 @@
 				CF67E55E2744E1F100261E51 /* AppDelegate.swift in Sources */,
 				CF67E5602744E1F100261E51 /* SceneDelegate.swift in Sources */,
 				CF67E5722744E6D500261E51 /* NetworkManagment.swift in Sources */,
+				CFB19D62274634190038EAC6 /* WeatherModels.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

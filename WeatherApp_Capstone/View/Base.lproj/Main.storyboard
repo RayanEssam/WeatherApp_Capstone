@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="WeatherApp_Capstone" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dC4-Mb-IqE">
+                                <rect key="frame" x="15" y="54" width="384" height="62.5"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n4m-pg-seY">
+                                        <rect key="frame" x="14" y="16" width="153" height="31"/>
+                                        <color key="backgroundColor" red="1" green="0.99999994039999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="tintColor" red="0.29803921570000003" green="0.50980392159999999" blue="0.77647058820000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Get Location"/>
+                                        <connections>
+                                            <action selector="getLocationButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MP5-Az-Mlm"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemTealColor"/>
+                                <constraints>
+                                    <constraint firstItem="n4m-pg-seY" firstAttribute="leading" secondItem="dC4-Mb-IqE" secondAttribute="leading" constant="14" id="1Bn-CI-AFd"/>
+                                    <constraint firstItem="n4m-pg-seY" firstAttribute="width" secondItem="dC4-Mb-IqE" secondAttribute="width" multiplier="0.4" id="46S-dQ-vhW"/>
+                                    <constraint firstItem="n4m-pg-seY" firstAttribute="top" secondItem="dC4-Mb-IqE" secondAttribute="top" constant="16" id="eFh-sA-wEY"/>
+                                    <constraint firstItem="n4m-pg-seY" firstAttribute="centerY" secondItem="dC4-Mb-IqE" secondAttribute="centerY" id="g34-ds-dJU"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="dC4-Mb-IqE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="HaQ-qP-7aF"/>
+                            <constraint firstItem="dC4-Mb-IqE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="J9v-wo-RU7"/>
+                            <constraint firstItem="dC4-Mb-IqE" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.07" id="YQJ-ig-i7N"/>
+                            <constraint firstItem="dC4-Mb-IqE" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="mpu-GQ-aE4"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="getLocationButton" destination="n4m-pg-seY" id="wjQ-J0-Tch"/>
+                        <outlet property="topBarCard" destination="dC4-Mb-IqE" id="a9d-5E-EaT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="101.78571428571428"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemTealColor">
+            <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
