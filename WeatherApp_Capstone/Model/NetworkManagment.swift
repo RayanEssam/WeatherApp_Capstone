@@ -1,5 +1,8 @@
 import Foundation
 
+
+
+
 struct NetworkManagment {
     
     
@@ -25,10 +28,7 @@ struct NetworkManagment {
     
     func fetchWeatherData( completion: @escaping(Weather) -> Void )  {
   
-     
 
-       
-        
         guard let urlObject = URL(string: preparedUrl ) else{
             print("error")
             return
@@ -51,7 +51,7 @@ struct NetworkManagment {
 
                     return
                 }else{
-                  
+                  print("error")
                 }
             }
             
